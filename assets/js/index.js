@@ -55,13 +55,19 @@ function updateScreen(fadeout)
 updateScreen()
 
 for(i=0; i<notification.length; i++) {
-    notification[i].onclick = click => {
-        notificationStatus[click.target.id - 1] = true;
+
+    notification[i].addEventListener("click", function() {
+        console.log(this);
+        notificationStatus[this.id - 1] = true;
         updateScreen(true);
-    }
+    })
 
     notification[i].onmouseover = current => {
-        document.getElementById(current.target.id).style.backgroundColor = "var(--notification-hover)";
+        if (current.target.id != "")
+            {
+            document.getElementById(current.target.id).style.backgroundColor = "var(--notification-hover)";
+            }
+        
     }
 
     notification[i].onmouseleave = current => {
