@@ -9,6 +9,8 @@
     --secondary-text-color: #5d646e;
     --bold-secondary-highlighted-text-color: #173ba7;
 
+    --notification-hover: #f5f0f0;
+
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -42,7 +44,7 @@ body {
     display: flex;
     width: 95%;
     align-items: center;
-    background-color: var(--notification-background-color);
+    /* background-color: var(--notification-background-color); */
     margin: .3em 0;
     border-radius: 1em;
     justify-content: space-between;
@@ -136,7 +138,7 @@ a {
 
 .notification:hover {
     transition: .2s;
-
+    background-color: #e9eaeb;
     -webkit-box-shadow: 6px 6px 20px -12px rgba(0,0,0,0.31);
     -moz-box-shadow: 6px 6px 20px -12px rgba(0,0,0,0.31);
     box-shadow: 6px 6px 20px -12px rgba(0,0,0,0.31);

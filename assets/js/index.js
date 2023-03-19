@@ -59,4 +59,12 @@ for(i=0; i<notification.length; i++) {
         notificationStatus[click.target.id - 1] = true;
         updateScreen(true);
     }
+
+    notification[i].onmouseover = current => {
+        document.getElementById(current.target.id).style.backgroundColor = "var(--notification-hover)";
+    }
+
+    notification[i].onmouseleave = current => {
+        updateScreen(true)
+    }
 }
