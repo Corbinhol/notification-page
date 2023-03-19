@@ -191,7 +191,13 @@ button#mark-all:active {
         min-height: 100vh;
     }
 
+    .notification-details {
+        max-width: 80%;
+    }
+
     .notification img {
         margin-left: .7em; 
+        width: 4em;
+        height: 4em;
     }
 }

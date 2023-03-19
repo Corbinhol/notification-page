@@ -2,12 +2,6 @@ let notificationStatus = [false, false, false, true, true, true, true];
 
 let notification = document.getElementsByClassName("notification");
 
-// for(let i=0; i<notifications.length; i++)
-//     {
-//     console.log(notifications[i]);
-//     }
-
-// console.log(notifications);
 updateScreen(false);
 document.getElementById("mark-all").onclick = () => {
     for(i=0; i<notificationStatus.length; i++)
@@ -67,8 +61,9 @@ for(i=0; i<notification.length; i++) {
             {
             document.getElementById(current.target.id).style.backgroundColor = "var(--notification-hover)";
             }
-        
     }
+
+    document.addEventListener("touchstart", function() {}, true);
 
     notification[i].onmouseleave = current => {
         updateScreen(true)
